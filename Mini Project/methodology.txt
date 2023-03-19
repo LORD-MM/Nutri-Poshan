@@ -7,7 +7,3 @@ Data regarding distribution of these mid-day meals will be uploaded class-wise b
 The admin will provide us data on a weekly basis and a monthly report will be generated comprising of reviews and suggested improvements.
 
 4) This report will facilitate the schools to ensure the inclusion of proper nutrient levels in the mid-day meals on a regular basis.
-
-I edited this file.right now kunal bbg.
-
-thike kya kunal !!
