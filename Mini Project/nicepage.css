@@ -40798,10 +40798,10 @@ a.u-link.u-text-hover-grey-90:hover {
     width: 184px;
   }
 
-  .u-header .u-logo-image-1 {
+  /*.u-header .u-logo-image-1 {
     max-width: 64px;
     max-height: 64px;
-  }
+  }*/
 
   .u-header .u-menu-1 {
     margin-right: calc(((100% - 940px) / 2));
