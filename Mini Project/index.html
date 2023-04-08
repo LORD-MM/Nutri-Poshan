@@ -1,103 +1,181 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="en"><head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="Khana khaake sojao">
-    <meta name="description" content="">
-    <title>Nutri-Poshan</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-    <link rel="stylesheet" href="Homepage.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <!--meta name="generator" content="Nicepage 5.7.5, nicepage.com"-->
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutri-Poshan</title>
+  <style>
+body,
+figure,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-image: url("bodybg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Header styles */
+header {
+  background-image: linear-gradient(to right, #3E5713, #2F6D9F);
+  color: #A5B;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #9CF;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section styles */
+.hero {
+  color: #000;
+  padding: 80px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.cta {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.cta:hover {
+  background-color: #000000;
+}
+
+/* Features section styles */
+.features {
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature {
+  flex-basis: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.feature img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 16px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+	<img src="C:\Users\kunal\OneDrive\Desktop\Nutri-Poshan\images\logo_nobg_nutriposhan.png" alt="Logo" style="
+    	width: 256px;
+    	height: 100px;
+	">
+    </a>
+    <nav>
+      <ul>
+        
+        <li><a href="#">Sign in</a></li>
+        <li><a href="#">Sign up</a></li>
+        <li><a href="https://www.poshantracker.in/ptcalculator" target="_blank">Calculator</a></li>
+        <li><a href="https://pmposhan.education.gov.in/" target="_blank">PM Poshan</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Welcome to Nutri-Poshan</h1>
+    <p>Your source for healthy nutrition and well-being</p>
+    <a href="login blur.html" class="cta">Get Started</a>
+  </section>
+  <section class="features">
+    <h2>Our Features</h2>
+    <div class="feature">
+      <img src="C:\Users\kunal\OneDrive\Desktop\Nutri-Poshan\images\hero_bg.jpg" alt="Feature 1">
+      <h3>Healthy Recipes</h3>
+      <p>Discover a wide range of delicious and nutritious recipes that will help you maintain a healthy diet.</p>
+    </div>
+    <div class="feature">
+      <img src="/images/feature2.jpg" alt="Feature 2">
+      <h3>Nutrition Tips</h3>
+      <p>Learn about the importance of balanced nutrition and get expert tips on how to make healthy choices in your daily life.</p>
+    </div>
+    <div class="feature">
+      <img src="/images/feature3.jpg" alt="Feature 3">
+      <h3>Wellness Resources</h3>
+      <p>Access a wealth of resources on physical, mental, and emotional well-being to help you lead a healthy lifestyle.</p>
+    </div>
+  </section>
+  <footer>
     
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "",
-		"url": "/",
-		"logo": "/images/logo_nobg_nutriposhan.png"
-}</script>
-    <meta name="theme-color" content="#f41818">
-    <meta property="og:title" content="Homepage">
-    <meta property="og:type" content="website">
-    <link rel="canonical" href="/">
-  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
-  <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-image u-header" id="sec-0c7a" data-image-width="600" data-image-height="265"><a href="https://nutri-poshan.netlify.app/" class="u-image u-logo u-image-1">
-        <img src="/images/logo_nobg_nutriposhan.png" class="u-logo-image u-logo-image-1">
-      </a><nav class="u-menu u-menu-hamburger u-offcanvas u-menu-1" data-responsive-from="XL">
-        <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 500;">
-          <a class="u-button-style u-custom-active-color u-custom-border u-custom-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#" style="padding: 4px 72px; font-size: calc(1em + 8px);">
-            <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
-            <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-</g></svg>
-          </a>
-        </div>
-        <div class="u-custom-menu u-nav-container">
-          <ul class="u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-grey-5 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="#" style="padding: 10px 20px;">Sign in</a>
-</li><li class="u-nav-item"><a class="u-active-grey-5 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="#" style="padding: 10px 20px;">Sign up</a>
-</li><li class="u-nav-item"><a class="u-active-grey-5 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="https://www.poshantracker.in/ptcalculator" target="_blank" style="padding: 10px 20px;">Calculator</a>
-</li><li class="u-nav-item"><a class="u-active-grey-5 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="https://pmposhan.education.gov.in/" target="_blank" style="padding: 10px 20px;">PM Poshan</a>
-</li><li class="u-nav-item"><a class="u-active-grey-5 u-button-style u-hover-grey-10 u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 20px;">About Us</a>
-</li></ul>
-        </div>
-        <div class="u-custom-menu u-nav-container-collapse">
-          <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-            <div class="u-inner-container-layout u-sidenav-overflow">
-              <div class="u-menu-close"></div>
-              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Sign in</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Sign up</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://www.poshantracker.in/ptcalculator" target="_blank">Calculator</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://pmposhan.education.gov.in/" target="_blank">PM Poshan</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">About Us</a>
-</li></ul>
+            <div class="grid-items">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <a href="#">FAQs</a>
+                <a href="#">Grievance</a>
             </div>
-          </div>
-          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-        </div>
-      </nav></header>
-    <section class="u-align-center u-clearfix u-white u-section-1" src="" id="sec-365d">
-      <img class="u-expanded-width u-image u-image-default u-image-1" src="/images/bg1.jpeg" data-image-width="1920" data-image-height="713" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="">
-      <h1 class="u-text u-text-body-alt-color u-text-default-xl u-title u-text-1">Welcome to Nutri-Poshan/h1>
-      <a href="/Sign-up-1.html" class="u-active-custom-color-1 u-border-4 u-border-active-white u-border-hover-white u-border-white u-btn u-btn-round u-button-style u-hover-custom-color-1 u-radius-50 u-text-active-white u-text-hover-white u-text-palette-2-base u-white u-btn-2">Get started</a>
-    </section>
-    <section class="u-clearfix u-section-2" id="sec-a61e">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-image u-layout-cell u-size-30 u-image-1" data-image-width="400" data-image-height="265">
-                <div class="u-container-layout u-valign-top u-container-layout-1"></div>
-              </div>
-              <div class="u-container-align-center u-container-style u-layout-cell u-size-30 u-layout-cell-2">
-                <div class="u-container-layout u-valign-middle u-container-layout-2">
-                  <h2 class="u-align-center u-text u-text-default u-text-1">Sample Headline</h2>
-                  <p class="u-align-center u-text u-text-default u-text-2">Sample text. Click to select the Text Element.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    
-    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-c51f"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-      </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/css-templates" target="_blank">
-        <span>CSS Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" target="_blank">
-        <span>Free Website Builder</span>
-      </a>. 
-    </section>
-  
-</body></html>
+     <p>&copy; 2023 Nutri-Poshan. All rights reserved. | Website by [Your Name]</p>
+  </footer>
+</body>
+
+</html>
