@@ -121,6 +121,12 @@ footer {
   padding: 20px;
   text-align: center;
 }
+	  
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust as needed */
+  gap: 10px; /* Set the gap between grid items */
+}
 
   </style>
 </head>
@@ -136,8 +142,8 @@ footer {
     <nav>
       <ul>
         
-        <li><a href="#">Sign in</a></li>
-        <li><a href="#">Sign up</a></li>
+        <li><a href="login blur.html">Sign in</a></li>
+        <li><a href="signup.html">Sign up</a></li>
         <li><a href="https://www.poshantracker.in/ptcalculator" target="_blank">Calculator</a></li>
         <li><a href="https://pmposhan.education.gov.in/" target="_blank">PM Poshan</a></li>
         <li><a href="#">Contact Us</a></li>
@@ -168,16 +174,18 @@ footer {
       <p>Access a wealth of resources on physical, mental, and emotional well-being to help you lead a healthy lifestyle.</p>
     </div>
   </section>
-  <footer>
+  <footer class="footer">
     
-            <div class="grid-items">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact Us</a>
-                <a href="#">FAQs</a>
-                <a href="#">Grievance</a>
+            <div class="grid-container">
+                <div class="grid-item">Privacy Policy</div>
+                <div class="grid-item">Helpdesk</div>
+                <div class="grid-item">Terms of Service</div>
+                <div class="grid-item">Poshan Calculator</div>
+                <div class="grid-item">About us</div>
+                <div class="grid-item">FAQs</div>
+  </div>
             </div>
-     <p>&copy; 2023 Nutri-Poshan. All rights reserved. | Website by [Your Name]</p>
+     <p>&copy; 2023 Nutri-Poshan. All rights reserved. | Website by [WeVictuals]</p>
   </footer>
 </body>
 
