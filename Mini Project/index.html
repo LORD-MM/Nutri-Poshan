@@ -116,18 +116,47 @@ nav ul li a:hover {
 
 /* Footer styles */
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-	  
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Adjust as needed */
-  gap: 10px; /* Set the gap between grid items */
+  background-color: #f8f9fa;
+  color: #6c757d;
+  padding: 50px 0;
 }
 
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.footer-column {
+  padding: 0 15px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-column ul li a {
+  color: #6c757d;
+}
+
+.fa {
+  margin-right: 10px;
+}
   </style>
 </head>
 
@@ -170,19 +199,36 @@ footer {
       <p>​It will take sectionwise weekly data of the meals being provided to the students and generate a monthly report for the same. This report in turn helps the moderator to implement better modifications to the meal plan.</p>
     </div>
   </section>
-  <footer class="footer">
-    
-            <div class="grid-container">
-                <div class="grid-item">Privacy Policy</div>
-                <div class="grid-item">Helpdesk</div>
-                <div class="grid-item">Terms of Service</div>
-                <div class="grid-item">Poshan Calculator</div>
-                <div class="grid-item">About us</div>
-                <div class="grid-item">FAQs</div>
+  <footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <ul>
+        <li><i class="fa fa-map-marker"></i> 123 Main St, Anytown, USA 12345</li>
+        <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+        <li><i class="fa fa-envelope"></i> info@yourwebsite.com</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+      </ul>
+    </div>
   </div>
-            </div>
-     <p>&copy; 2023 Nutri-Poshan. All rights reserved. | Website by [WeVictuals]</p>
-  </footer>
+</footer>
+
 </body>
 
 </html>
