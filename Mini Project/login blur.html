@@ -17,6 +17,35 @@
             margin: 0;
         }
 
+        /* Header styles */
+header {
+  background-image: linear-gradient(to right, #2a7c5e, #339d46);
+  color: #A5B;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #141736;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
         .login-box {
             width: 300px;
             padding: 20px;
@@ -24,7 +53,7 @@
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
             border-radius: 5px;
         }
-
+        
         .login-box h1 {
             text-align: center;
             margin-top: 0;
@@ -61,6 +90,50 @@
         .login-box button:hover {
             background-color: #0056b3;
         }
+        
+        /* Footer styles */
+footer {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  padding: 50px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.footer-column {
+  padding: 0 15px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-column ul li a {
+  color: #6c757d;
+}
+
+.fa {
+  margin-right: 10px;
+}
     </style>
 </head>
 
