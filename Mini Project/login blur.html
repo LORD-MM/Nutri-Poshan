@@ -4,19 +4,6 @@
 <head>
     <title>Login Page</title>
     <style>
-        body {
-            background-image: url(bodybg.jpg); /* Replace with your own background image */
-            background-size: cover;
-            background-position: center;
-            backdrop-filter: blur(5px); /* Adjust the blur strength as desired */
-            font-family: Arial, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-
         /* Header styles */
 header {
   background-image: linear-gradient(to right, #2a7c5e, #339d46);
@@ -46,6 +33,21 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
 }
+
+        body {
+            background-image: url(bodybg.jpg); /* Replace with your own background image */
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(5px); /* Adjust the blur strength as desired */
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
         .login-box {
             width: 300px;
             padding: 20px;
@@ -91,7 +93,7 @@ nav ul li a:hover {
             background-color: #0056b3;
         }
         
-        /* Footer styles */
+/* Footer styles */
 footer {
   background-color: #f8f9fa;
   color: #6c757d;
@@ -138,7 +140,7 @@ footer {
 </head>
 
 <body>
-      <header>
+      <header style="width: 1440px;">
     <a href="index.html">
 	<img src="\images\logo_nobg_nutriposhan.png" alt="Logo" style="
     	width: 256px;
@@ -166,7 +168,7 @@ footer {
         </b>Don't have an account</b>
         <a href="signup.html">Signup</a>
     </div>
-  <footer>
+  <footer style="width: 1460px;">
   <div class="footer-container">
     <div class="footer-column">
       <h3>Contact Us</h3>
