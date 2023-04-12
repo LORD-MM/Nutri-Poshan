@@ -1,0 +1,172 @@
+<style>
+h2{
+
+}
+body,
+figure,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-image: url("bodybg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Header styles */
+header {
+  background-image: linear-gradient(to right, #3E5713, #2F6D9F);
+  color: #A5B;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #9CF;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust as needed */
+  gap: 10px; /* Set the gap between grid items */
+}
+
+.classes-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.class-card {
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f2f2f2;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.class-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.class-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.class-card p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+}
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classes Section Example</title>
+    
+</head>
+<body>
+  <header>
+    <a href="index.html">
+	<img src="C:\Users\kunal\OneDrive\Desktop\Nutri-Poshan\images\logo_nobg_nutriposhan.png" alt="Logo" style="
+    	width: 256px;
+    	height: 100px;
+	">
+    </a>
+    <nav>
+      <ul>
+        
+        <li><a href="login blur.html">Sign in</a></li>
+        <li><a href="signup.html">Sign up</a></li>
+        <li><a href="https://www.poshantracker.in/ptcalculator" target="_blank">Calculator</a></li>
+        <li><a href="https://pmposhan.education.gov.in/" target="_blank">PM Poshan</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <h2><center>Select Class</center></h2><br>
+    <section class="classes-section">
+        
+        
+        
+        <div class="class-card">
+            <h3>Class 1</h3>
+        </div>
+        <div class="class-card">
+            <h3>Class 2</h3>
+        </div>
+        <div class="class-card">
+            <h3>Class 3</h3> 
+        </div>
+        <div class="class-card">
+            <h3>Class 4</h3> 
+        </div>
+        <div class="class-card">
+            <h3>Class 5</h3> 
+        </div>
+        <div class="class-card">
+            <h3>Class 6</h3>
+        </div>
+        <div class="class-card">
+            <h3>Class 7</h3>
+        </div>
+        <div class="class-card">
+            <h3>Class 8</h3>
+        </div> 
+        </div>
+    </section>
+<section>    
+<footer class="footer">
+    
+            <div class="grid-container">
+                <div class="grid-item">Privacy Policy</div>
+                <div class="grid-item">Helpdesk</div>
+                <div class="grid-item">Terms of Service</div>
+                <div class="grid-item">Poshan Calculator</div>
+                <div class="grid-item">About us</div>
+                <div class="grid-item">FAQs</div>
+  </div>
+            </div>
+     <p>&copy; 2023 Nutri-Poshan. All rights reserved. | Website by [WeVictuals]</p>
+  </footer>
+</body>
+</html>
