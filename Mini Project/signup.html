@@ -1,209 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up</title>
-  <link rel="stylesheet" href="style.css">
   <style>
-body {
-      font-family: Arial, sans-serif;
-      background-image: url(bodybg.jpg); /* Replace with your background image URL */
-      background-size: cover;
-      background-position: center;
-      background-blur: 5px; /* Add blur effect */
-      overflow: hidden; /* Prevent scrollbar */
-    }  
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-}
+    /* Global styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.container {
-  width: 300px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-}
-/* Header styles */
-header {
-  background-image: linear-gradient(to right, #2a7c5e, #339d46);
-  color: #A5B;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1dbcd8;
+    }
 
-nav ul {
-  list-style-type: none;
-  display: flex;
-}
+    /* Center the container */
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-nav ul li {
-  margin-right: 20px;
-}
+    .container {
+      width: 400px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
 
-nav ul li a {
-  color: #141736;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-}
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
 
-nav ul li a:hover {
-  text-decoration: underline;
-}
+    form {
+      display: flex;
+      flex-direction: column;
+    }
 
-h1 {
-  text-align: center;
-}
+    label {
+      margin-top: 10px;
+      color: #444;
+      font-weight: bold;
+    }
 
-form {
-  margin-top: 20px;
-}
+    input {
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: none;
+      background-color: #f2f2f2;
+      color: #444;
+    }
 
-label,
-input {
-  display: block;
-  width: 100%;
-}
+    input[type="submit"] {
+      margin-top: 20px;
+      background-color: #007bff;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-label {
-  margin-top: 10px;
-}
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
 
-input[type="submit"] {
-  margin-top: 20px;
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    p {
+      text-align: center;
+      margin-top: 10px;
+      color: #444;
+    }
 
-input[type="submit"]:hover {
-  background-color: #0056b3;
-}
-
-p {
-  text-align: center;
-  margin-top: 10px;
-}
-	  /* Footer styles */
-footer {
-  background-color: #f8f9fa;
-  color: #6c757d;
-  padding: 50px 0;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
-}
-
-.footer-column {
-  padding: 0 15px;
-}
-
-.footer-column h3 {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.footer-column ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.footer-column ul li a {
-  color: #6c757d;
-}
-
-.fa {
-  margin-right: 10px;
-}
-</style>
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
 </head>
+
 <body>
-	<header>
-    <a href="index.html">
-	<img src="\images\logo_nobg_nutriposhan.png" alt="Logo" style="
-    	width: 256px;
-    	height: 100px;
-	">
-    </a>
-    <nav>
-      <ul>
-        
-        <li><a href="login blur.html">Sign in</a></li>
-        <li><a href="signup.html">Sign up</a></li>
-        <li><a href="https://www.poshantracker.in/ptcalculator" target="_blank">Calculator</a></li>
-        <li><a href="https://pmposhan.education.gov.in/" target="_blank">PM Poshan</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
-  <div class="container">
-    <h1>Sign Up</h1>
-    <form>
-      <label for="username">Institute name</label>
-      <input type="text" id="username" name="username" placeholder="Enter your Institute name" required>
-      <label for="email">Institute Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter your Institute email" required>
-      <label for="address">Institute address</label>
-      <input type="address" id="address" name="address" placeholder="Enter your Institute address" required>
-	<label for="username">Your moderator name</label>
-      <input type="text" id="username" name="username" placeholder="Enter your moderator name" required>
-	<label for="email">Moderator Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter your moderator email" required>
-	<label for="phoneno">Moderator phone no.</label>
-      <input type="phoneno" id="phoneno" name="phoneno" placeholder="Enter moderator phone no" required>
-	<label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Enter your password" required>
-      <input type="submit" value="Sign Up">
-    </form>
-    <p>Already have an account? <a href="login blur.html">Sign In</a></p>
-  </div>
-	  <footer>
-  <div class="footer-container">
-    <div class="footer-column">
-      <h3>Contact Us</h3>
-      <ul>
-        <li><i class="fa fa-map-marker"></i> 123 Main St, Anytown, USA 12345</li>
-        <li><i class="fa fa-phone"></i> (555) 555-5555</li>
-        <li><i class="fa fa-envelope"></i> info@yourwebsite.com</li>
-      </ul>
+  <main>
+    <div class="container">
+      <h1>Sign Up</h1>
+      <form>
+        <label for="instituteName">Institute's name</label>
+        <input type="text" id="instituteName" name="instituteName" placeholder="Enter your Institute's name" required>
+        <label for="instituteEmail">Institute's Email</label>
+        <input type="email" id="instituteEmail" name="instituteEmail" placeholder="Enter your Institute's email" required>
+        <label for="instituteAddress">Institute's address</label>
+        <input type="text" id="instituteAddress" name="instituteAddress" placeholder="Enter your Institute's address" required>
+        <label for="moderatorName">Your moderator's name</label>
+        <input type="text" id="moderatorName" name="moderatorName" placeholder="Enter your moderator's name" required>
+        <label for="moderatorEmail">Moderator's Email</label>
+        <input type="email" id="moderatorEmail" name="moderatorEmail" placeholder="Enter your moderator's email" required>
+        <label for="moderatorPhone">Moderator's phone no.</label>
+        <input type="tel" id="moderatorPhone" name="moderatorPhone" placeholder="Enter your moderator's phone no." required>
+        <input type="submit" value="Submit">
+      </form>
+      <p>Already have an account? <a href="#">Log In</a></p>
     </div>
-    <div class="footer-column">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </div>
-    <div class="footer-column">
-      <h3>Legal</h3>
-      <ul>
-        <li><a href="t&c.html">Terms of Service</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="#">Cookie Policy</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
+  </main>
 </body>
 </html>
