@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Login Page</title>
-    <style>
-        /* Header styles */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+
+/* Header styles */
 header {
   background-image: linear-gradient(to right, #2a7c5e, #339d46);
   color: #A5B;
@@ -12,8 +15,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
+  margin-bottom: 0;
   width: 100%;
 }
 
@@ -37,73 +41,82 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-        body {
-            background-image: url(bodybg.jpg); /* Replace with your own background image */
-            background-size: cover;
-            background-position: center;
-            backdrop-filter: blur(5px); /* Adjust the blur strength as desired */
-            font-family: Arial, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            flex-wrap: wrap;
-        }
+body {
+  background-image: url("/images/bodybg.jpg"); /* Replace with your own background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(5px); /* Adjust the blur strength as desired */
+  font-family: Lucida Bright, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150vh;
+  margin: 0;
+  flex-wrap: wrap;
+}
 
-        .login-box {
-            width: 300px;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-        }
-        
-        .login-box h1 {
-            text-align: center;
-            margin-top: 0;
-        }
+main {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
 
-        .login-box label,
-        .login-box input[type="text"],
-        .login-box input[type="password"],
-        .login-box button {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px;
-        }
 
-        .login-box label {
-            font-weight: bold;
-        }
+/*login box styles */
+.login-box {
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
 
-        .login-box input[type="text"],
-        .login-box input[type="password"] {
-            padding: 10px;
-            border: none;
-            border-bottom: 1px solid #ccc;
-        }
+.login-box h1 {
+  text-align: center;
+  margin-top: 0;
+}
 
-        .login-box button {
-            padding: 10px;
-            background-color: #007bff;
-            color: #ffffff;
-            border: none;
-            cursor: pointer;
-        }
+.login-box label,
+.login-box input[type="text"],
+.login-box input[type="password"],
+.login-box button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
 
-        .login-box button:hover {
-            background-color: #0056b3;
-        }
+.login-box label {
+    font-weight: bold;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.login-box button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background-color: #0056b3;
+}
         
 /* Footer styles */
 footer {
-  background-color: #f8f9fa;
+  background-color: #000000;
   color: #6c757d;
-  padding: 50px 0;
+  padding: 40px 0;
   position: absolute;
+  margin-top: 50px; /* add this line */
   bottom: 0;
-  width: 100%;
+  width: 100vw;
 }
 
 .footer-container {
@@ -111,7 +124,7 @@ footer {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
+  grid-gap: 10px;
 }
 
 .footer-column {
@@ -142,12 +155,12 @@ footer {
 .fa {
   margin-right: 10px;
 }
-    </style>
+</style>
 </head>
 
 <body>
-      <header>
-    <a href="index.html">
+  <header>
+  <a href="index.html">
 	<img src="\images\logo_nobg_nutriposhan.png" alt="Logo" style="
     	width: 256px;
     	height: 100px;
@@ -164,16 +177,19 @@ footer {
       </ul>
     </nav>
   </header>
+  <main>
     <div class="login-box">
-        <h1>Login</h1>
-        <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Enter your username">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter your password">
-        <a href="classess.html"><button type="submit">Login</button>
-        </b>Don't have an account</b>
-        <a href="signup.html">Signup</a>
-    </div>
+      <h1>Login</h1>
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter your username">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password">
+      <a href="classess.html"><button type="submit">Login</button>
+      </b>Don't have an account</b>
+      <a href="signup.html">Signup</a>
+  </div>
+  </main>
+    
   <footer>
   <div class="footer-container">
     <div class="footer-column">
