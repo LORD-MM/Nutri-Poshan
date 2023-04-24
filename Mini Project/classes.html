@@ -26,7 +26,7 @@ body {
 
 /* Header styles */
 header {
-  background-image: linear-gradient(to right, #3E5713, #2F6D9F);
+  background-image: linear-gradient(to right, #2a7c5e, #339d46);
   color: #A5B;
   padding: 20px;
   display: flex;
@@ -44,60 +44,58 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #9CF;
+  color: #141736;
   text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 nav ul li a:hover {
   text-decoration: underline;
 }
+
 /* Footer styles */
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  background-color: #000000;
+  color: #6c757d;
+  padding: 40px 0;
 }
 
-.grid-container {
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Adjust as needed */
-  gap: 10px; /* Set the gap between grid items */
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
 }
 
-.classes-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.footer-column {
+  padding: 0 15px;
 }
 
-.class-card {
-    width: 200px;
-    padding: 20px;
-    margin: 10px;
-    background-color: #f2f2f2;
-    text-align: center;
-    border-radius: 5px;
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
-.class-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.class-card h3 {
-    margin-top: 10px;
-    font-size: 18px;
+.footer-column ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
-.class-card p {
-    margin-top: 5px;
-    font-size: 14px;
-    color: #666;
+.footer-column ul li a {
+  color: #6c757d;
+}
+
+.fa {
+  margin-right: 10px;
 }
 </style>
     
