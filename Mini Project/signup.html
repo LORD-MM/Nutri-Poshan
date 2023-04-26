@@ -90,7 +90,7 @@
   <main>
     <div class="container">
       <h1>Sign Up</h1>
-      <form>
+      <form action="/signup" method="POST"
         <label for="instituteName">Institute's name</label>
         <input type="text" id="instituteName" name="instituteName" placeholder="Enter your Institute's name" required>
         <label for="instituteEmail">Institute's Email</label>
@@ -104,7 +104,7 @@
         <label for="moderatorPhone">Moderator's phone no.</label>
         <input type="tel" id="moderatorPhone" name="moderatorPhone" placeholder="Enter your moderator's phone no." required>
         <label for="institutePass">Institute's Password</label>
-        <input type="password" id="institutePass" name="institutePass" placeholder="Enter a strong password" required>
+        <input type="password" id="institutePass" name="institutePass" placeholder="Enter a strong password">
         
         <input type="submit" value="Submit">
       </form>
