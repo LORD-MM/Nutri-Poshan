@@ -27,9 +27,9 @@ const app = express();
 
 // Connect to the MongoDB Atlas cluster
 mongoose.connect('mongodb+srv://madhurmanekar:atlasuser01@nutri-poshan.t2pg1xv.mongodb.net', { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log('Connected to MongoDB Atlas');
-  })
+//   .then(() => {
+//     console.log('Connected to MongoDB Atlas');
+//   })
   .catch((error) => {
     console.error(error);
   });
