@@ -90,7 +90,7 @@
   <main>
     <div class="container">
       <h1>Sign Up</h1>
-      <form action="/signup" method="get">
+      <form action="/signup" method="post">
         <label for="instituteName">Institute's name</label>
         <input type="text" id="instituteName" name="instituteName" placeholder="Enter your Institute's name" required>
         <label for="instituteEmail">Institute's Email</label>
@@ -115,7 +115,7 @@
 
   try {
     const response = await fetch('/signup', {
-      method: 'get',
+      method: 'post',
       body: new FormData(form),
     });
     if (response.ok) {
