@@ -52,7 +52,7 @@ const Institute = mongoose.model('Institute', InstituteSchema);
 app.use(express.urlencoded({ extended: true }));
 
 // Handle form submission
-app.post('/signup', async (req, res) => {
+app.get('/signup', async (req, res) => {
   const {
     instituteName,
     instituteEmail,
