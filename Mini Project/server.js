@@ -5,12 +5,10 @@ const mongoose = require('mongoose');
 const app = express();
 
 // Connect to the MongoDB Atlas cluster
-mongoose.connect('mongodb+srv://madhurmanekar:atlasuser01@nutri-poshan.t2pg1xv.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
-  .catch((error) => {
-    console.error(error);
-  });
-
-// Define the MongoDB schema and model for the institute collection
+mongoose.connect('mongodb+srv://madhurmanekar:atlasuser01@nutri-poshan.t2pg1xv.mongodb.net', { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log('Connected to MongoDB Atlas');
+    // Define the MongoDB schema and model for the institute collection
 const InstituteSchema = new mongoose.Schema({
   instituteName: {
     type: String,
@@ -41,9 +39,7 @@ const InstituteSchema = new mongoose.Schema({
     required: true
   }*/
 });
-
-//console.log(InstituteSchema.instituteName);
-const Institute = mongoose.model('Institute', InstituteSchema);
+    const Institute = mongoose.model('Institute', InstituteSchema);
 
 // Parse incoming form data
 app.use(express.urlencoded({ extended: true }));
@@ -80,8 +76,17 @@ app.get('/signup', async (req, res) => {
     res.status(500).send('Internal server error');
   }
 });
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+
+
+//console.log(InstituteSchema.instituteName);
+
 
 // Start the server
-app.listen(27017, () => {
+app.listen(3000, () => {
   console.log('Server started on port 3000');
 });
