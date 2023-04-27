@@ -74,6 +74,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // Handle form submission
 app.get('/signup', async (req, res) => {
+  
+  console.log(req.body);
+  
   const {
     instituteName,
     instituteEmail,
