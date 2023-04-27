@@ -115,7 +115,7 @@
 
   try {
     const response = await fetch('/signup', {
-      method: 'POST',
+      method: 'get',
       body: new FormData(form),
     });
     if (response.ok) {
