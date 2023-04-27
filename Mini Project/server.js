@@ -19,6 +19,7 @@ MongoClient.connect(url, function(err, client) {
       res.redirect('/thank-you');
     });
   });
+  client.close();
 });
 
 
