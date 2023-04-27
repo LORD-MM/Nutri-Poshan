@@ -103,10 +103,30 @@
         <input type="email" id="moderatorEmail" name="moderatorEmail" placeholder="Enter your moderator's email" required>
         <label for="moderatorPhone">Moderator's phone no.</label>
         <input type="tel" id="moderatorPhone" name="moderatorPhone" placeholder="Enter your moderator's phone no." required>
-        <input type="submit" value="Submit">
+        <input type="submit" onclick="handleSubmit" value="Submit">
       </form>
       <p>Already have an account? <a href="#">Log In</a></p>
     </div>
   </main>
 </body>
+<script>const handleSubmit = async (event) => {
+  event.preventDefault();
+  const form = event.target;
+
+  try {
+    const response = await fetch('/signup', {
+      method: 'POST',
+      body: new FormData(form),
+    });
+    if (response.ok) {
+      window.location.href = '/signup-success';
+    } else {
+      console.error('Error submitting form:', response);
+      // Handle error here
+    }
+  } catch (error) {
+    console.error('Error submitting form:', error);
+    // Handle error here
+  }
+};</script>
 </html>
