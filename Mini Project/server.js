@@ -2,7 +2,7 @@ const MongoClient = require('mongodb').MongoClient;
 const express = require('express')
 const app = express();
 
-const url = 'mongodb+srv://madhurmanekar:atlasuser01@nutri-poshan.t2pg1xv.mongodb.net/trial';
+const url = 'mongodb+srv://madhurmanekar:atlasuser01@nutri-poshan.t2pg1xv.mongodb.net/test?retryWrites=true&w=majority';
 
 MongoClient.connect(url, function(err, client) {
   if (err) throw err;
