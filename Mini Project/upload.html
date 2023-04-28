@@ -138,6 +138,23 @@ footer {
 .fa {
   margin-right: 10px;
 }
+.view-button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Some padding */
+  text-align: center; /* Centered text */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Displayed as a block element */
+  font-size: 16px; /* Font size */
+  margin: 10px 0px; /* Some margin */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 10%;
+}
+.view-button:hover {
+  background-color: #3e8e41; /* Darker green background on hover */
+}
+
   </style>
 </head>
 <body>
@@ -166,6 +183,9 @@ footer {
             <label for="file">Select a file:</label>
             <input type="file" name="file" id="file">
             <input type="submit" value="Upload">
+            <button class="view-button">View report of last month</button>
+            <ul><li><a href="https://docs.google.com/spreadsheets/d/1NYUc8drn5ess91rIBoN6KFsLm6sPS5pS/edit?usp=sharing&ouid=100285538178675550429&rtpof=true&sd=true" target="_blank">View format for uploading the file</a></li></ul>
+
         </form>
 
 
