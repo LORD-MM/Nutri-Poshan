@@ -50,6 +50,8 @@ app.post('/signup', async (req, res) => {
 
 
 // Start the server
-app.listen(3000, () => {
-    console.log('Server started on port 3000');
+if (process.env.NODE_ENV !== 'build') {
+  const server = app.listen(3000, () => {
+    console.log(`Server started on port 3000`);
   });
+}
