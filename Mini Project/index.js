@@ -25,7 +25,7 @@ const instituteSchema = new mongoose.Schema({
 app.use(express.static('public'));
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '/index.html'));
+  res.sendFile(path.join(__dirname, '/signup.html'));
 })
 
 app.post('/signup', async (req, res) => {
