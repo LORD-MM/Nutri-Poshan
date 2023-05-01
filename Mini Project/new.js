@@ -55,3 +55,10 @@ if (process.env.NODE_ENV !== 'build') {
     console.log(`Server started on port 3000`);
   });
 }
+process.on('SIGINT', () => {
+  console.log('Received SIGTERM, shutting down server...');
+  server.close(() => {
+    console.log('Server has been shut down');
+    process.exit(0);
+  });
+});
