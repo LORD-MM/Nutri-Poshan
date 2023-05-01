@@ -1,124 +1,16 @@
-// // const express = require("express");
-// // const mongoose = require("mongoose");
-// // const app = express();
+const MongoClient = require('mongodb').MongoClient;
 
-// // const uri = "mongodb+srv://madhurmanekar:atlasuser01@nutri-poshan.t2pg1xv.mongodb.net/test";
-
-// // async function connect() {
-// //     try {
-// //         await mongoose.connect(uri);
-// //         console.log("connected to Mongodb")
-// //     } catch (error) {
-// //         console.error(error);
-// //     }
-// // }
-
-// // connect();
-
-// // app.listen(8000, () => {
-// //     console.log("Server started on post 8000");
-// // })
-
-// const express = require('express');
-// const mongoose = require('mongoose');
-
-// // Create an instance of the express application
-// const app = express();
-
-// // Connect to the MongoDB Atlas cluster
-// mongoose.connect('mongodb+srv://madhurmanekar:atlasuser01@nutri-poshan.t2pg1xv.mongodb.net', { useNewUrlParser: true, useUnifiedTopology: true })
-// //   .then(() => {
-// //     console.log('Connected to MongoDB Atlas');
-// //   })
-//   .catch((error) => {
-//     console.error(error);
-//   });
-
-// // Define the MongoDB schema and model for the institute collection
-// const InstituteSchema = new mongoose.Schema({
-//   instituteName: {
-//     type: String,
-//     required: true
-//   },
-//   instituteEmail: {
-//     type: String,
-//     required: true
-//   },
-//   instituteAddress: {
-//     type: String,
-//     required: true
-//   },
-//   moderatorName: {
-//     type: String,
-//     required: true
-//   },
-//   moderatorEmail: {
-//     type: String,
-//     required: true
-//   },
-//   moderatorPhone: {
-//     type: String,
-//     required: true
-//   },
-//   /*institutePass: {
-//     type: String,
-//     required: true
-//   }*/
-// });
-
-// //console.log(InstituteSchema.instituteName);
-// const Institute = mongoose.model('Institute', InstituteSchema);
-
-// // Parse incoming form data
-// app.use(express.urlencoded({ extended: true }));
-
-// // Handle form submission
-// app.get('/signup', async (req, res) => {
-  
-//   console.log(req.body);
-  
-//   const {
-//     instituteName,
-//     instituteEmail,
-//     instituteAddress,
-//     moderatorName,
-//     moderatorEmail,
-//     moderatorPhone,
-//     //institutePass
-//   } = req.body;
-
-//   // Create a new institute document
-//   const institute = new Institute({
-//     instituteName,
-//     instituteEmail,
-//     instituteAddress,
-//     moderatorName,
-//     moderatorEmail,
-//     moderatorPhone,
-//     //institutePass
-//   });
-
-//   try {
-//     // Save the document to the database
-//     await institute.save();
-//     res.send('Form submitted successfully');
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).send('Internal server error');
-//   }
-// });
-
-// // Start the server
-// app.listen(3000, () => {
-//   console.log('Server started on port 3000');
-// });
-
-
+const path = require('path');
 const express = require('express');
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const app = express();
 
-// Connect to MongoDB server
-mongoose.connect('mongodb+srv://madhurmanekar:atlasuser01@nutri-poshan.t2pg1xv.mongodb.net', { useNewUrlParser: true });
+
+app.use(bodyParser.urlencoded({extended: true }));
+
+const url = 'mongodb+srv://madhurmanekar:atlasuser01@nutri-poshan.t2pg1xv.mongodb.net/?retryWrites=true&w=majority';
+const client = new MongoClient(url);
 
 // Define a schema for the data
 const instituteSchema = new mongoose.Schema({
@@ -130,37 +22,42 @@ const instituteSchema = new mongoose.Schema({
   moderatorPhone: String
 });
 
-// Create a model based on the schema
-const Institute = mongoose.model('Institute', instituteSchema);
+app.use(express.static('public'));
 
-// Create an express app
-const app = express();
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, '/index.html'));
+})
 
-// Parse incoming form data
-app.use(express.urlencoded({ extended: true }));
+app.post('/signup', async (req, res) => {
+  try {
+    await client.connect();
+    const collection = client.db('mydb').collection('mycollection');
+    const result = await collection.insertOne(req.body);
 
-// Handle form submissions
-app.post('/signup', (req, res) => {
-  const newInstitute = new Institute({
-    instituteName: req.body.instituteName,
-    instituteEmail: req.body.instituteEmail,
-    instituteAddress: req.body.instituteAddress,
-    moderatorName: req.body.moderatorName,
-    moderatorEmail: req.body.moderatorEmail,
-    moderatorPhone: req.body.moderatorPhone
-  });
-
-  newInstitute.save((err) => {
-    if (err) {
-      console.error(err);
-      res.status(500).send('Error saving data to database');
+    if (result && result.insertedId) {
+      res.status(200).send(`Inserted document with _id: ${result.insertedId}`);
     } else {
-      res.send('Data saved to database');
+      res.status(500).send('Error inserting document');
     }
-  });
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Error inserting document');
+  } finally {
+    await client.close();
+  }
 });
 
+
 // Start the server
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
+  const server = app.listen(5000, () => {
+    console.log(`Server started on port 3000`);
+  });
+
+process.on('SIGINT', () => {
+  console.log('Received SIGTERM, shutting down server...');
+  server.close(() => {
+    console.log('Server has been shut down');
+    process.exit(0);
+  });
 });
